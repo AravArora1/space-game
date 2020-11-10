@@ -47,11 +47,11 @@ function spaceshipMove(key){
 
     evem[No]={x:10,y:evmy}
 function dre(){
-    
+     
     setInterval(
         
         function(){
-            var random = Math.random()
+            var random = Math.random()*10
        
         if(evem[No.y==0]){
             randomReplace=random
@@ -73,25 +73,26 @@ function dre(){
             evmy+=1
 
         ctx.drawImage(meteor,evem[No].x,evem[No].y)
-
+        
         ctx.clearRect(meteor,evem[No].x,evem[No].y,meteor.width,meteor.height)
 
         evem.push({x:Math.floor(randomReplace*cvs.width),y:evmy})
 
 
         No+=1
-        console.log(Math.floor(randomReplace))
+        console.log(Math.floor(random))
         }
             
              
-            
-        ctx.drawImage(ship,Spx,400)
+          
+        
+        
         
         },20)
         
-           
         
-        
+        ctx.drawImage(bg,0,0) 
+    ctx.drawImage(ship,20,400)      
     requestAnimationFrame(dre) 
     // ctx.drawImage(bg,0,0)
 }
